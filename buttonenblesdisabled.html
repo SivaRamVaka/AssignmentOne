@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script>
+
+            var val=0,ref;
+
+            function fnstr()
+            {
+               
+                document.getElementById("b1").disabled=true;
+                document.getElementById("b2").disabled=false;
+                ref=setInterval(()=>{
+                    val++;
+                    document.getElementById("d1").innerHTML=val;
+                },1000);
+               
+            }
+            function fnstp()
+            {
+                document.getElementById("b1").disabled=false;
+                document.getElementById("b2").disabled=true;
+                clearInterval(ref);
+            }
+            </script>
+    </head>
+    <body>
+       <button id="b1" onclick="fnstr()">start</button>
+        <button id="b2"  onclick="fnstp()" >Stop</button>
+        <div id="d1"></div>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+    <head>
+<script>
+     var arr=[23,34,56,5,7,32,45,65,3];
+     var ot;
+     var result="";
+     var final="";
+    function f1()
+    {
+       
+        for(var i=0;i<arr.length;i++)
+        {
+           ot=arr[i];
+          final=f2(arr[i]);
+        }
+        document.getElementById("d1").innerHTML=result;
+    }
+    function f2(value)
+    {
+        var count=0;
+       for(var i=1;i<=value;i++)
+       {
+           if(value%i==0)
+           {
+               ++count;
+           }
+       }
+       if(count==2)
+       {
+          result=result+"its prime no :" +value +"<br>";
+       }
+       else
+       {
+        result=result+"its not a prime no :" +value +"<br>";
+       }
+    }
+    </script>
+    </head>
+    <body>
+        <button onclick="f1()">Click</button>
+        <div id="d1"></div>
+    </body>
+</html>
